@@ -54,11 +54,6 @@
             height: 40px;
             padding: 10px 0;
             margin-top: 40px;
-            &:hover {
-                color: $white;
-                border-color: darken($red , 5%);
-                background-color: darken($red , 5%);
-            }
         }
     }
     &__overlay {
@@ -135,6 +130,11 @@
             }
             &-side {
                 display: block;
+                &:active {
+                    color: $white;
+                    border-color: darken($red , 5%);
+                    background-color: darken($red , 5%);
+                }
             }
         }
         &__hamburger {

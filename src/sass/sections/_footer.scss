@@ -27,20 +27,20 @@
             line-height: 18px;
         }
         &-link {
+            color: $black;
             display: inline-block;
             font-size: 12px;
             line-height: 18px;
-            color: $black;
             cursor: pointer;
-            a {
-                color: inherit;
-                text-decoration: none;
+            &:hover {
+                color: lighten($black , 50%);
             }
             &:not(:first-child) {
                 margin-top: 5px;
             }
-            &:hover {
-                color: lighten($black , 50%);
+            a {
+                color: inherit;
+                text-decoration: none;
             }
         }
         &-social {
@@ -87,8 +87,6 @@
     }
 }
 
-// @media (max-width: 1199px) {}
-
 @media (max-width: 991px) {
     .footer {
         &__lists {
@@ -109,7 +107,34 @@
     }
 }
 
-// @media (max-width: 767px) {}
+@media (max-width: 767px) {
+    .footer {
+        &__item {
+            &-link {
+                &:hover {
+                    color: $black;
+                }
+                &:active {
+                    color: lighten($black , 50%);
+                }
+            }
+            &-social {
+                &-item {
+                    &:hover {
+                        path {
+                            fill: $black;
+                        }
+                    }
+                    &:active {
+                        path {
+                            fill: lighten($black , 50%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media (max-width: 575px) {
     .footer {
