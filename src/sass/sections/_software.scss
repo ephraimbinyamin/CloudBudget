@@ -52,6 +52,7 @@
             height: 66px;
             background-color: $red;
             border-radius: 100%;
+            transition: all 0.2s;
             span {
                 display: block;
                 width: 0;
@@ -80,6 +81,22 @@
         }
         &__video {
             margin-top: 50px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .software {
+        &__video {
+            margin-top: 50px;
+            &-play {
+                &:hover {
+                    background-color: $red;
+                }
+                &:active {
+                    background-color: darken($red , 5%);
+                }
+            }
         }
     }
 }

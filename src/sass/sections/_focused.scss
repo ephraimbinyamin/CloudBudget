@@ -73,6 +73,25 @@
     }
 }
 
+@media (max-width: 767px) {
+    .focused {
+        &__apps {
+            &-item {
+                &:hover {
+                    path {
+                        fill: $white;
+                    }
+                }
+                &:active {
+                    path {
+                        fill: darken($white , 10%);
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 575px) {
     .focused {
         padding: 50px 0;

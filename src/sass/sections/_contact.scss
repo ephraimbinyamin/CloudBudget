@@ -36,6 +36,7 @@
         &-btn {
             width: 130px;
             height: 47px;
+            color: $white;
             background-color: $red;
             border: 1px solid $red;
             padding: 10px 0;
@@ -91,6 +92,25 @@
         }
         &__form {
             margin-top: 50px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .contact {
+        &__form {
+            &-btn {
+                &:hover {
+                    color: $white;
+                    border: 1px solid $red;
+                    background-color: $red;
+                }
+                &:active {
+                    color: $white;
+                    border-color: darken($red , 5%);
+                    background-color: darken($red , 5%);
+                }
+            }
         }
     }
 }
